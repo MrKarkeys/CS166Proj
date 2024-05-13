@@ -24,6 +24,7 @@ Note: The IP of the attacker VM in our instance was 10.0.2.6 but the attacker ma
 Move the blacklist.conf file into the directory /etc/apache2/conf-available in order allow Apache2's commands to access the file.
 
 To turn on the provided blacklist, use the Terminal and do:
+
 sudo su
 
 a2enmod blacklist
