@@ -20,3 +20,11 @@ Manual IP blocking (Blacklist)
 To determine what the attacker IP is, use Wireshark to see what connections are currently holding all the resources of the server.
 The provided blacklist.conf file is the file we used to manually block the attacker VM's IP given the IP is not spoofed. Screenshots are provided to showcase what occurs. 
 Note: The IP of the attacker VM in our instance was 10.0.2.6 but the attacker may have a different IP. In this instance, change the "Require not ip 10.0.2.6" line to the correct IP you intend to block. You can also add more than one ip by adding multiple lines of "Require not ip x.x.x.x".
+
+Move the blacklist.conf file into the directory /etc/apache2/conf-available in order allow Apache2's commands to access the file.
+
+To turn on the provided blacklist, use the Terminal and do:
+sudo su
+a2enmod blacklist
+service apache2 reload
+
