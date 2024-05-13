@@ -14,11 +14,12 @@ sudo iptables -A INPUT -p tcp --syn --dport 80 -m connlimit --connlimit-above 25
 
 Screenshots are given of what occurs before and after running the iptables command in this same folder.
 
+<a href="https://github.com/MrKarkeys/CS166Proj/blob/SLOWLORIS-DEFENSE-BRANCH/SLOWLORIS%20ATTACK/IPTables%20Defense.PNG"><img src="https://raw.githubusercontent.com/MrKarkeys/CS166Proj/SLOWLORIS-DEFENSE-BRANCH/SLOWLORIS%20ATTACK/IPTables%20Defense.PNG"></a>
 
 Manual IP blocking (Blacklist)
 ---
 To determine what the attacker IP is, use Wireshark to see what connections are currently holding all the resources of the server.
-The provided blacklist.conf file is the file we used to manually block the attacker VM's IP given the IP is not spoofed. Screenshots are provided to showcase what occurs. 
+The provided blacklist.conf file is the file we used to manually block the attacker VM's IP given the IP is not spoofed.
 Note: The IP of the attacker VM in our instance was 10.0.2.6 but the attacker may have a different IP. In this instance, change the "Require not ip 10.0.2.6" line to the correct IP you intend to block. You can also add more than one ip by adding multiple lines of "Require not ip x.x.x.x".
 
 Move the blacklist.conf file into the directory /etc/apache2/conf-available in order allow Apache2's commands to access the file.
@@ -30,4 +31,13 @@ sudo su
 a2enmod blacklist
 
 service apache2 reload
+
+Screenshots are provided to showcase the difference. 
+
+**Blacklist Off:**
+<a href="https://github.com/MrKarkeys/CS166Proj/blob/SLOWLORIS-DEFENSE-BRANCH/SLOWLORIS%20ATTACK/Blacklist%20Off.PNG"><img src="https://raw.githubusercontent.com/MrKarkeys/CS166Proj/SLOWLORIS-DEFENSE-BRANCH/SLOWLORIS%20ATTACK/Blacklist%20Off.PNG"></a>
+
+**Blacklist On:**
+<a href="https://github.com/MrKarkeys/CS166Proj/blob/SLOWLORIS-DEFENSE-BRANCH/SLOWLORIS%20ATTACK/Blacklist%20On.PNG"><img src="https://raw.githubusercontent.com/MrKarkeys/CS166Proj/SLOWLORIS-DEFENSE-BRANCH/SLOWLORIS%20ATTACK/Blacklist%20On.PNG"></a>
+
 
