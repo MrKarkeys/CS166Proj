@@ -28,4 +28,6 @@
 # References
 - https://www.kali.org/tools/hping3/
 - https://www.youtube.com/watch?v=1QNBrj58aCc
+- https://github.com/nattycoder/TCP-SYN-FLOOD-Attack-using-Metasploitable-2
+- https://www.firewall.cx/tools-tips-reviews/network-protocol-analyzers/performing-tcp-syn-flood-attack-and-detecting-it-with-wireshark.html
 - CS166-L10-NetworkAttacks
