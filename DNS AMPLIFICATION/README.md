@@ -18,6 +18,9 @@ To execute the DNS Amplification attack, follow these steps:
 ## Attack Result
 Running the attack code floods the target machine with DNS responses, overwhelming the network and causing disruption. Observation of network utilization and packet reception can be done using tools like Wireshark.
 
+![image](https://github.com/MrKarkeys/CS166Proj/assets/101848838/95e5efed-4ef4-4e74-ae5d-5da9b2aa9004)
+
+
 ## Defense Mechanism
 To defend against DNS Amplification attacks, a basic rate limiting defense mechanism is implemented. This defense mechanism restricts the volume of incoming packets based on source IP addresses, thus mitigating the impact of such attacks. The defense code (`ratelimit.py`) utilizes Scapy for packet sniffing and manipulation.
 
@@ -25,6 +28,9 @@ To defend against DNS Amplification attacks, a basic rate limiting defense mecha
 1. Install Scapy by executing `pip install scapy`.
 2. Run the defense code using `sudo python ratelimit.py`.
 3. The defense code sets the allowed number of packets/IP/sec to a default value of 5, which can be modified by editing the code.
+
+![image](https://github.com/MrKarkeys/CS166Proj/assets/101848838/e5b30e02-4875-48c4-92af-040dac28e9a9)
+
 
 ## Analysis
 DNS Amplification attacks are highly effective due to their ability to multiply the volume of data sent to the victim, causing network saturation and resource exhaustion. The use of spoofed IP addresses complicates mitigation efforts. Rate limiting serves as an effective defense mechanism by restricting the volume of responses a DNS server can send within a unit time, thus mitigating the impact of such attacks and conserving network bandwidth and resources.
