@@ -18,7 +18,7 @@ To execute the DNS Amplification attack, follow these steps:
 ## Attack Result
 Running the attack code floods the target machine with DNS responses, overwhelming the network and causing disruption. Observation of network utilization and packet reception can be done using tools like Wireshark.
 
-![image](https://github.com/MrKarkeys/CS166Proj/assets/101848838/95e5efed-4ef4-4e74-ae5d-5da9b2aa9004)
+![image](https://github.com/MrKarkeys/CS166Proj/assets/101848838/25eee66e-9434-425a-ad41-93eb41a9c6c3)
 
 
 ## Defense Mechanism
@@ -29,7 +29,7 @@ To defend against DNS Amplification attacks, a basic rate limiting defense mecha
 2. Run the defense code using `sudo python ratelimit.py`.
 3. The defense code sets the allowed number of packets/IP/sec to a default value of 5, which can be modified by editing the code.
 
-![image](https://github.com/MrKarkeys/CS166Proj/assets/101848838/e5b30e02-4875-48c4-92af-040dac28e9a9)
+![image](https://github.com/MrKarkeys/CS166Proj/assets/101848838/b18a2d33-dd3f-4e0d-baed-daa476434427)
 
 
 ## Analysis
