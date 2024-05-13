@@ -1,4 +1,4 @@
-# DNS Amplification Attack and Defense README
+# DNS Amplification Attack and Defense
 
 ## Overview
 This repository contains information and code related to the implementation and defense against DNS Amplification attacks. DNS Amplification attacks leverage the characteristics of the DNS to flood a target network or server with an overwhelming volume of traffic, causing service disruption or downtime. This README provides details on how to execute the attack and implement a basic defense mechanism using rate limiting.
