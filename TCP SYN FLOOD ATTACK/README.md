@@ -9,7 +9,7 @@
 7. If the command outputs 0, syncookies is disabled. Good!
 8. Now open up 3 terminals, wireshark, and system monitoring on Kali Linux
 
-#Running the Attack
+# Running the Attack
 - This is how your setup should look before attacking Metsploitable.
 ![image](https://github.com/MrKarkeys/CS166Proj/assets/95559518/114a3f1e-f358-484e-be7c-c926054f1db2)
 
