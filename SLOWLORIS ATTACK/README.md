@@ -25,6 +25,8 @@ Move the blacklist.conf file into the directory /etc/apache2/conf-available in o
 
 To turn on the provided blacklist, use the Terminal and do:
 sudo su
+
 a2enmod blacklist
+
 service apache2 reload
 
