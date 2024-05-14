@@ -11,5 +11,5 @@ This example uses two virtual machines set up in VirtualBox. The virtual machine
 3. Launch the SEEDLabs VM and obtain its IP address through the `ifconfig` command in the terminal.
 4. Open up System Monitor and Wireshark, both of which come preinstalled in the distribution.
 5. Launch the Kali Linux VM.
-6. Open the terminal and run the command `hping3 --icmp --flood <Target IP Address>` with the IP address of the SEEDLabs VM.
-7. Observe the effects on Wireshark and System Monitor, or try opening a webpage to see the practical effects.
+6. Open the terminal and run the command `hping3 --icmp --flood <Target IP Address>` with the IP address of the SEEDLabs VM. hping3 is a network tool that comes preinstalled with Kali Linux, but if the library is not found install it using `sudo apt install hping3`.
+7. Observe the effects of the attack using Wireshark and System Monitor, or try opening a webpage to see the practical effects.
