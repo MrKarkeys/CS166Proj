@@ -37,11 +37,10 @@ Steps to Enable and Run mod_ratelimit (can be found on https://www.youtube.com/w
 2. Enable rate limit with **"a2enmod ratelimit"**
 3. Next, we want to edit the conf file with **"gedit /etc/apache2/conf-available/ratelimit.conf"**
 4. Enter the following inside the conf file:
-   <IfModule mod_ratelimit.c>
-     <Location /download>
-       SetOutputFilter RATE_LIMIT
-       SetEnv rate-limit 500
-     </Location>
-   </IfModule>
-5. Close out of editing and enter **"a2enconf ratelimit"** and you will be prompted to reload the service.
 
+   <img src="https://raw.githubusercontent.com/MrKarkeys/CS166Proj/main/HTTP%20FLOOD%20ATTACK/RATE_LIMIT_CONF.PNG">
+   
+6. Close out of editing and enter **"a2enconf ratelimit"** and you will be prompted to reload the service.
+
+### Comparison of server status with mod_ratelimit on and off:
+Without mod_ratelimit attacked by 4 terminals: 
