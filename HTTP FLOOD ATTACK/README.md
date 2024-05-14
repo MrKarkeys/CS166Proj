@@ -7,8 +7,8 @@ HTTP Flood Attack is a type of DDoS attack designed to overwhelm and shut down a
 2. Run 3 terminal windows inside KaliLinux and enter into the location of where the attack code is stored.
 3. Inside SeedUbuntu, launch Apache2 by first installing apache2 in terminal with the command **"sudo apt-get install apache2"** and start the web server with **"sudo service apache2 start"**
 4. We then open up Firefox in SeedUbuntu and type in **"localhost/server-status"** and this is where we will be attacking and monitoring the status of the server during an attack.
-5. The IP address of SeedUbuntu can be found using **"ifconfiq"** and the IP address will be defined in the HTTP Flood attack code inside of KaliLinux.
-6. 
+5. The IP address of SeedUbuntu can be found using **"ifconfiq"** and the IP address will be defined in the HTTP Flood attack code inside of KaliLinux. In my case, the SeedUbuntu's IP address to be attacked is "10.0.2.4".
 
 ## Attack & Result
+1. 
 ## Defense
