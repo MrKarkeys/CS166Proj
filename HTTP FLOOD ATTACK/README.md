@@ -30,17 +30,24 @@ The Apache2 server can be monitored throughout different timestamps to best see 
 
 As the attacker is sending in requests, the CPU load can be seen increasing in percentage over time, indicating that the HTTP GET requests are flooding and overwhelming the Apache2's server resources and ability to process the requests on time. 
 
-## Defenses
-**Apache2 mod_ratelimit**
+## Apache2 mod_ratelimit
 Steps to Enable and Run mod_ratelimit (can be found on https://www.youtube.com/watch?v=dSd3axdGk_4&ab_channel=QuickNotepadTutorial)
 1. Inside SeedUbuntu terminal, enter into root with **"sudo su"**.
 2. Enable rate limit with **"a2enmod ratelimit"**
 3. Next, we want to edit the conf file with **"gedit /etc/apache2/conf-available/ratelimit.conf"**
-4. Enter the following inside the conf file:
+4. Enter the following inside the conf file (rate-limit can be changed depending on how much bandwidth(KB/sec) we want):
 
    <img src="https://raw.githubusercontent.com/MrKarkeys/CS166Proj/main/HTTP%20FLOOD%20ATTACK/RATE_LIMIT_CONF.PNG">
    
 6. Close out of editing and enter **"a2enconf ratelimit"** and you will be prompted to reload the service.
 
 ### Comparison of server status with mod_ratelimit on and off:
-Without mod_ratelimit attacked by 4 terminals: 
+Without mod_ratelimit on attacked by 4 terminals: 
+
+<img src="https://raw.githubusercontent.com/MrKarkeys/CS166Proj/main/HTTP%20FLOOD%20ATTACK/Without_mod_ratelimit.png">
+
+With mod_ratelimit on attacked by 4 terminals: 
+
+<img src="https://raw.githubusercontent.com/MrKarkeys/CS166Proj/main/HTTP%20FLOOD%20ATTACK/With_mod_ratelimit.png">
+
+By comparison, mod_ratelimit being turned on greatly reduced the amounts of requests being processed per second from 256 requests/sec down to just 79.6 requests/sec. The number of requests currently being processed also dropped drastically from averaging 100 requests to just around 2 requests. However, at around the one minute work of being under attacked, Apache2's CPU load with mod_ratelimit on is only 10% less than when mod_ratelimit is off. Ultimately, mod_rate limit is effective at limiting the rate at which requests are being processed by altering the bandwidth in the configuration; however, having mod_rate limit by itself is not completely sufficient enough to mitigate larger-scale HTTP flood attacks, such as having 10 different devices attacking the server. Therefore, it should be used with other methods such as iptables, which can be found in the "Slowroris folder" with steps and instructions.
